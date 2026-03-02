@@ -1,28 +1,32 @@
+#include <cstdio>
 #include <stdio.h>
 #include <windows.h>
 
+#define DLL_NAME ("mydll.dll")
+#define TARGET_PROCESS_NAME ("notepad.exe")
+
 int main()
 {
-  char dllPath[MAX_PATH];
-  GetFullPathNameA("mydll.dll", MAX_PATH, dllPath, NULL);
+  char dllPath[MAX_PATH]{0};
+  GetFullPathNameA(DLL_NAME, MAX_PATH, dllPath, NULL);
 
   PVOID addrLoadLibrary = (PVOID)GetProcAddress(GetModuleHandleA("kernel32.dll"), "LoadLibraryA");
 
-  HWND hwnd = FindWindowA("Notepad", NULL);
+  HWND hwnd = FindWindowA(TARGET_PROCESS_NAME, NULL);
   if (!hwnd)
   {
-    printf("Please open Notepad first!\n");
+    std::puts("You must open notepad first");
     return 0;
   }
 
-  DWORD pid;
+  DWORD pid{};
   GetWindowThreadProcessId(hwnd, &pid);
   HANDLE proc = OpenProcess(PROCESS_ALL_ACCESS, FALSE, pid);
 
   PVOID memAddr = (PVOID)VirtualAllocEx(proc, NULL, strlen(dllPath) + 1, MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
   if (NULL == memAddr)
   {
-    printf("VirtualAllocEx failed!\n");
+    std::puts("VirtualAllocEx failed");
     return 0;
   }
 
@@ -33,6 +37,6 @@ int main()
   CloseHandle(hThread);
   CloseHandle(proc);
 
-  printf("DLL injected successfully!\n");
+  std::puts("DLL injected");
   return 0;
 }
