@@ -8,6 +8,7 @@ BOOL APIENTRY DllMain(HMODULE hModule,
   switch (ul_reason_for_call)
   {
   case DLL_PROCESS_ATTACH:
+    // Show MessageBox
     MessageBoxA(NULL, "Running Inside Notepad!", "INJECTED!", MB_OK | MB_ICONEXCLAMATION);
     break;
 
