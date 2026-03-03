@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Cyber_Magshimim\\Documents\\archi\\archi-sof-2\\DLL\\Project1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CA043E11-C497-433E-9EB2-C69B7BC72923}|Project1.vcxproj|C:\\Users\\Cyber_Magshimim\\Documents\\archi\\archi-sof-2\\DLL\\Project1\\lib.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CA043E11-C497-433E-9EB2-C69B7BC72923}|Project1.vcxproj|solutionrelative:lib.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "lib.cpp",
+              "DocumentMoniker": "C:\\Users\\Cyber_Magshimim\\Documents\\archi\\archi-sof-2\\DLL\\Project1\\lib.cpp",
+              "RelativeDocumentMoniker": "lib.cpp",
+              "ToolTip": "C:\\Users\\Cyber_Magshimim\\Documents\\archi\\archi-sof-2\\DLL\\Project1\\lib.cpp",
+              "RelativeToolTip": "lib.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-03-03T14:43:56.709Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
