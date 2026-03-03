@@ -1,5 +1,5 @@
 /**
- * Idan Drori LLC Copyright (c) 2026
+ * Idan Drori™ LLC Copyright ©️ 2026
  */
 
 #include <cstdio>
@@ -12,6 +12,7 @@
 
 int main(void)
 {
+  // Get full path of DLL (I used MAX_PATH here which is a windows constant)
   char dllPath[MAX_PATH]{0};
   GetFullPathNameA(DLL_NAME, MAX_PATH, dllPath, NULL);
 
@@ -61,13 +62,13 @@ int main(void)
     return 0;
   }
 
-  // Wait for thread to finish
+  // Wait for thread to finish...
   WaitForSingleObject(hThread, INFINITE);
 
   // cleanuip
   CloseHandle(hThread);
   CloseHandle(proc);
 
-  std::puts("DLL injected");
+  std::cout << "DLL injected";
   return 0;
 }
